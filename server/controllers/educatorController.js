@@ -43,6 +43,7 @@ export const addCourse = async (req, res) => {
         const parsedCourseData = await JSON.parse(courseData)
 
         parsedCourseData.educator = educatorId
+        parsedCourseData.status = 'pending'; // Set the status to 'pending'
 
         const newCourse = await Course.create(parsedCourseData)
 
