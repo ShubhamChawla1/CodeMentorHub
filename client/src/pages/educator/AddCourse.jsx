@@ -72,6 +72,12 @@ const AddCourse = () => {
   };
 
   const addLecture = () => {
+    const { lectureTitle, lectureDuration, lectureUrl } = lectureDetails;
+
+  if (!lectureTitle.trim() || !lectureDuration.trim() || !lectureUrl.trim()) {
+    toast.error("Please fill all lecture details");
+    return;
+  }
     setChapters(
       chapters.map((chapter) => {
         if (chapter.chapterId === currentChapterId) {
@@ -100,6 +106,13 @@ const AddCourse = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
+      const courseDescription = quillRef.current.root.innerHTML.trim();
+      const plainText = quillRef.current.getText().trim();
+
+      if (!plainText || plainText === "") {
+      toast.error("Course Description is required");
+      return;
+      }
 
       if (!image) {
         toast.error("Thumbnail Not Selected");
@@ -174,6 +187,7 @@ const AddCourse = () => {
         <div className="flex flex-col gap-1">
           <p>Course Description</p>
           <div ref={editorRef}></div>
+          
         </div>
 
         <div className="flex items-center justify-between flex-wrap">
