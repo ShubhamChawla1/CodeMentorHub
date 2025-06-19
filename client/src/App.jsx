@@ -17,6 +17,7 @@ import MyEnrollments from "./pages/student/MyEnrollments";
 import Loading from "./components/student/Loading";
 import SuperAdminPage from "./pages/superAdmin/superAdmin";
 import SuperAdminLogin from "./pages/superAdmin/superAdminLogin";
+import AboutUs from "./pages/student/Aboutus";  
 
 const App = () => {
   const isEducatorRoute = useMatch("/educator/*");
@@ -42,6 +43,7 @@ const App = () => {
         </Route>
         <Route path="/super-admin" element={<SuperAdminPage />} />
         <Route path="/super-admin-login" element={<SuperAdminLogin />} />
+        <Route path="/aboutus" element={<AboutUs/>}/> 
       </Routes>
     </div>
   );
