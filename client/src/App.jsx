@@ -17,7 +17,9 @@ import MyEnrollments from "./pages/student/MyEnrollments";
 import Loading from "./components/student/Loading";
 import SuperAdminPage from "./pages/superAdmin/superAdmin";
 import SuperAdminLogin from "./pages/superAdmin/superAdminLogin";
-import AboutUs from "./pages/student/Aboutus";  
+import AboutUs from "./pages/student/Aboutus";
+import ContactUs from "./pages/student/Contactus";
+import PrivacyPolicy from "./pages/student/PrivacyPolicy";
 
 const App = () => {
   const isEducatorRoute = useMatch("/educator/*");
@@ -43,7 +45,9 @@ const App = () => {
         </Route>
         <Route path="/super-admin" element={<SuperAdminPage />} />
         <Route path="/super-admin-login" element={<SuperAdminLogin />} />
-        <Route path="/aboutus" element={<AboutUs/>}/> 
+        <Route path="/aboutus" element={<AboutUs/>}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/privacypolicy" element={<PrivacyPolicy/>}/> 
       </Routes>
     </div>
   );
