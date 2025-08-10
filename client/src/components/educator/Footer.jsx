@@ -12,13 +12,13 @@ const Footer = () => {
         </p>
       </div>
       <div className='flex items-center gap-3 max-md:mt-4'>
-        <a href="https://www.Facebook.com" target='_blank'>
+        <a href="https://www.Facebook.com" target='_blank' >
           <img src={assets.facebook_icon} alt="facebook_icon" />
         </a>
-        <a href="https://www.twitter.com" target='_blank'>
+        <a href="https://www.twitter.com" target='_blank' className='hover:text-pink-400'>
           <img src={assets.twitter_icon} alt="twitter_icon" />
         </a>
-        <a href="https://www.instagram.com" target='_blank'>
+        <a href="https://www.instagram.com" target='_blank' className='hover:text-pink-400'>
           <img src={assets.instagram_icon} alt="instagram_icon" />
         </a>
       </div>
