@@ -24,7 +24,7 @@ const ContactUs = () => {
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h3 className="text-xl font-semibold mb-2">📍 Address</h3>
             <p className="text-gray-600">
-              CodeMentorHub Pvt. Ltd.<br />
+              CodeMentorHub<br />
               2nd Floor, Tech Park Building,<br />
               Bengaluru, Karnataka, 560001, India
             </p>
